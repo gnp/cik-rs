@@ -1,0 +1,16 @@
+[package]
+name = "cik"
+version = "0.1.0"
+description = "Support for creating and validating CIKs"
+authors = ["Gregor Purdy <gregor@abcelo.com>"]
+license = "MIT OR Apache-2.0"
+edition = "2021"
+keywords = ["cik", "identifier", "finance", "entity", "company"]
+categories = ["parsing"]
+readme = "README.md"
+repository = "https://github.com/gnp/cik-rs.git"
+
+[dev-dependencies]
+proptest = "1.0"
+
+[dependencies]
