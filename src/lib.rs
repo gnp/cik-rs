@@ -99,6 +99,14 @@ impl FromStr for CIK {
     }
 }
 
+impl TryFrom<u64> for CIK {
+    type Error = CIKError;
+
+    fn try_from(value: u64) -> Result<Self, Self::Error> {
+        build(value)
+    }
+}
+
 impl CIK {
     /// Return the underlying integer _Value_ of the CIK.
     pub fn value(&self) -> u64 {
