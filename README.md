@@ -45,7 +45,7 @@ fn main() -> () {
     match cik::parse(cik_string) {
         Ok(cik) => {
             println!("Parsed CIK: {}", cik.to_string()); // "320193"
-            println!("  Integer value: {}", cik.to_int()); // 320193
+            println!("  Integer value: {}", cik.value()); // 320193
         }
         Err(err) => panic!("Unable to parse CIK {}: {}", cik_string, err),
     }
