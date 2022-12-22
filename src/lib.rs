@@ -79,6 +79,10 @@ pub fn validate(value: &str) -> bool {
     return b.iter().all(|b| *b >= b'0' && *b <= b'9');
 }
 
+#[doc = include_str!("../README.md")]
+#[cfg(doctest)]
+pub struct ReadmeDoctests;
+
 /// A CIK in confirmed valid format.
 #[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Hash, Debug)]
 #[repr(transparent)]
