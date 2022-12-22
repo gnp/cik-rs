@@ -30,8 +30,7 @@
 //! * [LEI](https://crates.io/crates/lei): Legal Entity Identifier (ISO 17442:2020)
 //!
 
-use std::fmt::Formatter;
-use std::fmt::{Debug, Display};
+use std::fmt;
 use std::str::FromStr;
 
 pub mod error;
@@ -84,14 +83,20 @@ pub fn validate(value: &str) -> bool {
 pub struct ReadmeDoctests;
 
 /// A CIK in confirmed valid format.
-#[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Hash, Debug)]
+#[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Hash)]
 #[repr(transparent)]
 #[allow(clippy::upper_case_acronyms)]
 pub struct CIK(u64);
 
-impl Display for CIK {
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+impl fmt::Display for CIK {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(f, "{}", self.0)
+    }
+}
+
+impl fmt::Debug for CIK {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "CIK{}", self.0)
     }
 }
 
