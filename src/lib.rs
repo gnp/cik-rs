@@ -65,7 +65,7 @@ pub fn build(value: u64) -> Result<CIK, CIKError> {
 /// value.
 pub fn validate(value: &str) -> bool {
     if value.is_empty() || value.len() > 10 {
-        println!("Bad length: {:?}", value);
+        println!("Bad length: {value:?}");
         return false;
     }
 

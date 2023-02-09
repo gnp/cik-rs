@@ -32,13 +32,13 @@ impl Debug for CIKError {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
             CIKError::InvalidLength { was } => {
-                write!(f, "InvalidLength {{ was: {:?} }}", was)
+                write!(f, "InvalidLength {{ was: {was:?} }}")
             }
             CIKError::InvalidFormat { was } => {
-                write!(f, "InvalidFormat {{ was: {:?} }}", was)
+                write!(f, "InvalidFormat {{ was: {was:?} }}")
             }
             CIKError::InvalidValue { was } => {
-                write!(f, "InvalidValue {{ was: {:?} }}", was)
+                write!(f, "InvalidValue {{ was: {was:?} }}")
             }
         }
     }
@@ -48,16 +48,15 @@ impl Display for CIKError {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
             CIKError::InvalidLength { was } => {
-                write!(f, "invalid length {} bytes when expecting 1 to 10", was)
+                write!(f, "invalid length {was} bytes when expecting 1 to 10")
             }
             CIKError::InvalidFormat { was } => {
-                write!(f, "invalid format {} when expecting integer", was)
+                write!(f, "invalid format {was} when expecting integer")
             }
             CIKError::InvalidValue { was } => {
                 write!(
                     f,
-                    "invalid value {} when expecting positive number up to 9,999,999,999",
-                    was
+                    "invalid value {was} when expecting positive number up to 9,999,999,999"
                 )
             }
         }
