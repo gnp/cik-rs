@@ -130,6 +130,9 @@ impl CIK {
     }
 }
 
+#[cfg(feature = "serde")]
+pub mod serde;
+
 #[cfg(test)]
 mod tests {
     use super::*;
