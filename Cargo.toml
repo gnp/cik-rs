@@ -11,6 +11,6 @@ readme = "README.md"
 repository = "https://github.com/gnp/cik-rs.git"
 
 [dev-dependencies]
-proptest = "1.0"
+proptest = "1.2.0"
 
 [dependencies]
