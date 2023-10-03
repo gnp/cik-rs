@@ -90,7 +90,7 @@ pub struct ReadmeDoctests;
 /// use cik;
 /// let cannot_construct = cik::CIK(0);
 /// ```
-#[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Hash)]
+#[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Copy, Hash)]
 #[repr(transparent)]
 #[allow(clippy::upper_case_acronyms)]
 pub struct CIK(u64);
