@@ -145,7 +145,7 @@ mod tests {
                 assert_eq!(cik.to_string(), "320193");
                 assert_eq!(cik.value(), 320193);
             }
-            Err(err) => assert!(false, "Did not expect parsing to fail: {}", err),
+            Err(err) => panic!("Did not expect parsing to fail: {}", err),
         }
     }
     #[test]
@@ -155,7 +155,7 @@ mod tests {
                 assert_eq!(cik.to_string(), "320193");
                 assert_eq!(cik.value(), 320193);
             }
-            Err(err) => assert!(false, "Did not expect building to fail: {}", err),
+            Err(err) => panic!("Did not expect building to fail: {}", err),
         }
     }
 
