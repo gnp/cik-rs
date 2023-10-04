@@ -1,5 +1,3 @@
-use cik;
-
 fn main() -> () {
     let cik_value = 320193;
     match cik::build(cik_value) {
