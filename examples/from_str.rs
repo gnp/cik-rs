@@ -1,7 +1,7 @@
 use cik::CIK;
 use std::str::FromStr;
 
-fn main() -> () {
+fn main() {
     let cik_string = "320193";
     match CIK::from_str(cik_string) {
         Ok(cik) => {

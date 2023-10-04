@@ -1,4 +1,4 @@
-fn main() -> () {
+fn main() {
     let cik_string = "320193";
     match cik::parse(cik_string) {
         Ok(cik) => {

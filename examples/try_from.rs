@@ -1,6 +1,6 @@
 use cik::CIK;
 
-fn main() -> () {
+fn main() {
     let cik_value = 320193;
     match CIK::try_from(cik_value) {
         Ok(cik) => {
