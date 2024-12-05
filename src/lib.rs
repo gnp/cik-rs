@@ -75,7 +75,7 @@ pub fn validate(value: &str) -> bool {
 
     let b = value.as_bytes();
 
-    return b.iter().all(|b| *b >= b'0' && *b <= b'9');
+    b.iter().all(|b| *b >= b'0' && *b <= b'9')
 }
 
 #[doc = include_str!("../README.md")]
