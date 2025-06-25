@@ -20,6 +20,15 @@
 //! Nonetheless, this library uses 64-bit values to ensure full conformance with the CIK definition of up to 10 decimal
 //! digits.
 //!
+//! ## Optional features
+//!
+//! This crate provides optional features for extended functionality:
+//!
+//! * `serde` - Enables serialization and deserialization via [serde](https://crates.io/crates/serde).
+//!   CIK values serialize as integers and can deserialize from integers or strings.
+//! * `schemars` - Enables JSON Schema generation via [schemars](https://crates.io/crates/schemars).
+//!   Generates schemas that accept both integer and string representations.
+//!
 //! ## Related crates
 //!
 //! This crate is part of the Financial Identifiers series:
@@ -132,6 +141,9 @@ impl CIK {
 
 #[cfg(feature = "serde")]
 pub mod serde;
+
+#[cfg(feature = "schemars")]
+pub mod schemars;
 
 #[cfg(test)]
 mod tests {

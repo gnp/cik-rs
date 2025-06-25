@@ -13,10 +13,17 @@ repository = "https://github.com/gnp/cik-rs.git"
 [dev-dependencies]
 proptest = "1.3.1"
 serde_json = "1.0"
+jsonschema = "0.25"
 
 [dependencies]
 serde = { version = "1.0", optional = true }
+schemars = { version = "0.8", optional = true }
 
 [features]
 default = []
 serde = ["dep:serde"]
+schemars = ["dep:schemars"]
+
+[[example]]
+name = "schemars"
+required-features = ["schemars"]

@@ -35,6 +35,16 @@ Add this to your `Cargo.toml`:
 cik = "0.1"
 ```
 
+### Optional features
+
+This crate supports optional features for serialization and JSON schema generation:
+
+```toml
+[dependencies]
+cik = { version = "0.1", features = ["serde"] }          # For serde support
+cik = { version = "0.1", features = ["schemars"] }       # For JSON Schema support
+cik = { version = "0.1", features = ["serde", "schemars"] } # For both
+```
 
 ## Example
 
