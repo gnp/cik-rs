@@ -20,8 +20,7 @@
 //! # }
 //! ```
 
-use self::cik::CIK;
-use crate as cik;
+use crate::CIK;
 use schemars::JsonSchema;
 
 impl JsonSchema for CIK {
